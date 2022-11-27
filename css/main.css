@@ -1,0 +1,61 @@
+nav {
+  width: 100%; 
+  background-color: #000000; 
+  overflow: auto;
+}
+
+nav a {
+  float: left;
+  text-align: center; 
+  padding: 20px 0; 
+  width: 20%;
+  transition: all 0.3s ease; 
+  color: white; 
+  font-size: 36px; 
+}
+
+nav a:hover {
+  background-color: #33cc33;
+}
+
+body {
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-family: 'Rubik';
+}
+
+@keyframes wave {
+  from, to {
+    transform: translate(-50%, 0%);
+  }
+  
+  50% {
+    transform: translate(-50%, -20%);
+  }
+}
+
+#bubble-wrapper {
+  height: 100%;
+  width: 100%;
+  
+  position: fixed;
+  bottom: 0px;
+  
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.bubble {
+  height: max(400px, 40vw);
+  width: max(400px, 40vw);
+  
+  background-color: rgb(51, 255, 0);  
+  border-radius: 100%;
+  
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  
+  animation: wave 2s ease-in-out infinite;
+}
