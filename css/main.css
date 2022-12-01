@@ -15,7 +15,7 @@ nav a {
 }
 
 nav a:hover {
-  background-color: #33cc33;
+  background-color: rgb(51, 255, 0);
 }
 
 body {
