@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title>Random Number Generator</title>
+  </head>
+  <body>
+    <h1>Random Number Generator</h1>
+    <p>
+      This website generates a random number between
+      <input type="number" id="min" value="0" />
+      and
+      <input type="number" id="max" value="10" />
+      <button type="button" onclick="generateNumber()">Generate</button>
+    </p>
+    <p>
+      <strong>Result:</strong> <span id="result"></span>
+    </p>
+    <script>
+      function generateNumber() {
+        // Get the minimum and maximum values from the input fields
+        var min = document.getElementById("min").value;
+        var max = document.getElementById("max").value;
+        
+        // Generate a random number between the minimum and maximum values
+        var result = Math.floor(Math.random() * (max - min + 1)) + min;
+        
+        // Display the result
+        document.getElementById("result").innerHTML = result;
+      }
+    </script>
+  </body>
+</html>
